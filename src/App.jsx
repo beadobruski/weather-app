@@ -1,12 +1,28 @@
-function App() {
+import { Card } from './components/Card';
+
+export function App() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('buscando dados');
+  };
+
   return (
-    <div className="flex bg-black">
-      <form>
-        <input type="text" placeholder="Cidade" />
-        <button type="submit">Pesquisar</button>
+    <div className="flex flex-col items-center justify-center w-full h-screen">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Cidade"
+          className="p-3 rounded-lg outline-none"
+        />
+        <button
+          type="submit"
+          className="p-3 rounded-lg bg-blue-600 ml-3 text-white font-semibold"
+        >
+          Pesquisar
+        </button>
       </form>
+
+      <Card />
     </div>
   );
 }
-
-export default App;
