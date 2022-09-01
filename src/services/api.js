@@ -5,7 +5,7 @@ const fetchData = async (city) => {
 
   const fetchResponse = await fetch(url);
 
-  console.log(fetchResponse);
+  return fetchResponse;
 };
 
 export default fetchData;

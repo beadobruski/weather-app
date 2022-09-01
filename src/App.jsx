@@ -1,9 +1,11 @@
 import { Card } from './components/Card';
+import fetchData from './services/api';
 
 export function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('buscando dados');
+
+    console.log(fetchData('fortaleza'));
   };
 
   return (
