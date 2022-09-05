@@ -1,5 +1,5 @@
 import { Card } from './components/Card';
-import fetchData from './services/api';
+import fetchData from './services/weather-api';
 
 export function App() {
   const handleSubmit = (event) => {
