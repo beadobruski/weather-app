@@ -1,7 +1,7 @@
-const KEY = 'a18ac759341b441d9eb20456223008';
+import API_KEY from './apikey.js';
 
 const fetchData = async (city) => {
-  const url = `http://api.weatherapi.com/v1/current.json?key=${KEY}&q=${city}&aqi=no`;
+  const url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`;
 
   const fetchResponse = await fetch(url);
 
